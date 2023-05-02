@@ -13,7 +13,6 @@ const FetchGreeting = createAsyncThunk(GREETINGLIST, async () => {
   const response = await axios.request(options);
 
   const greeting = response.data;
-  console.log(greeting);
   return greeting;
 });
 
