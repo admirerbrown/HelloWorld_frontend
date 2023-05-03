@@ -5,7 +5,6 @@ import axios from 'axios';
 const GREETINGLIST = 'greet/GREETINGLIST';
 
 const FetchGreeting = createAsyncThunk(GREETINGLIST, async () => {
-
   const options = {
     method: 'GET',
     url: 'http://127.0.0.1:3000/api/v1/greetings',
@@ -16,9 +15,8 @@ const FetchGreeting = createAsyncThunk(GREETINGLIST, async () => {
   return greeting;
 });
 
-
- const greetingSlice = createSlice({
-  name: "greeting",
+const greetingSlice = createSlice({
+  name: 'greeting',
   initialState: {
     data: [],
     isFulfilled: false,
@@ -30,9 +28,8 @@ const FetchGreeting = createAsyncThunk(GREETINGLIST, async () => {
       state.isFulfilled = true;
       state.data = action.payload;
     });
-
   },
 });
 
 export default greetingSlice;
-export { FetchGreeting }
+export { FetchGreeting };

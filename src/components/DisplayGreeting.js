@@ -1,9 +1,7 @@
 import { useSelector } from 'react-redux';
 import React from 'react';
 
-
 const Greeting = () => {
-
   const greetings = useSelector((state) => state.home.data);
 
   if (greetings) {
@@ -13,8 +11,7 @@ const Greeting = () => {
       </div>
     );
   }
-
+  return '';
 };
-
 
 export default Greeting;
